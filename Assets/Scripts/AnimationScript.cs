@@ -5,10 +5,7 @@ using UnityEngine.UI;
 
 public class AnimationScript : MonoBehaviour
 {
-    public float speed, acceleration, jumpHeight;
     public Vector2 movement;
-    public enum MOVEMENTSTATE { wForward, wBackward, wLeft, wRight, jump }
-    MOVEMENTSTATE moveState;
     [Range (-1f, 1f)] float leftRightBalance, currentLRB;
     [Range (-1f, 1f)] float forwardBackwardBalance, currentFBB;
 
@@ -35,46 +32,6 @@ public class AnimationScript : MonoBehaviour
     {
         leftRightBalance = animScrollX.value;
         forwardBackwardBalance = animScrollY.value;
-
-        //if (forwardBackwardBalance > .25)
-        //{
-        //    currentFBB += forwardBackwardBalance * acceleration * Time.deltaTime;
-        //}
-        //else if (forwardBackwardBalance < -.25f)
-        //{
-        //    currentFBB -= forwardBackwardBalance * acceleration * Time.deltaTime;
-        //}
-        //else
-        //{
-        //    if(currentFBB > forwardBackwardBalance)
-        //    {
-        //        currentFBB -= forwardBackwardBalance * acceleration * Time.deltaTime;
-        //    }
-        //    else if (currentFBB < forwardBackwardBalance)
-        //    {
-        //        currentFBB += forwardBackwardBalance * acceleration * Time.deltaTime;
-        //    }
-        //}
-        //if (leftRightBalance > .25f)
-        //{
-        //    currentLRB += leftRightBalance * acceleration * Time.deltaTime;
-
-        //}
-        //else if (leftRightBalance < -.25f)
-        //{
-        //    currentLRB -= leftRightBalance * acceleration * Time.deltaTime;
-        //}
-        //else
-        //{
-        //    if (currentLRB > leftRightBalance)
-        //    {
-        //        currentLRB -= leftRightBalance * acceleration * Time.deltaTime;
-        //    }
-        //    else if (currentLRB < leftRightBalance)
-        //    {
-        //        currentLRB += leftRightBalance * acceleration * Time.deltaTime;
-        //    }
-        //}
 
         movement = new Vector2(leftRightBalance, forwardBackwardBalance);
         //movement.Normalize();

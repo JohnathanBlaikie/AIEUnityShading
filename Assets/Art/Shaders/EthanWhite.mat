@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 3b5b7be0f2332c24f89a2af018daa62d, type: 3}
+        m_Texture: {fileID: 2800000, guid: c092e74a42a9ba7408fbc2eade648119, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Cube:
@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4e2f32e9a1fefc24092337ae061f3dbc, type: 3}
+        m_Texture: {fileID: 2800000, guid: fc4a98a2f4616c740a11a9bca0131bca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Occlusion:
@@ -89,7 +89,7 @@ Material:
     - _RimPower: 8
     - _Shininess: 0.41313845
     - _SmoothnessTextureChannel: 0
-    - _Solution: 1
+    - _Solution: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVPrim: 0

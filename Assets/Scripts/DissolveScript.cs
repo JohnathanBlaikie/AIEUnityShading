@@ -14,7 +14,7 @@ public class DissolveScript : MonoBehaviour
 
     public bool startDissolve;
     public bool resetDissolve;
-    public int loopZoop;
+    public int loopInt;
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +30,13 @@ public class DissolveScript : MonoBehaviour
         
         if (startDissolve)
         {
-            if(loopZoop == 0)
+            if(loopInt == 0)
             {
                 colorLerpTime = 0;
                 powerLerpTime = 0;
                 dissolveLerpTime = 0;
             }
-            loopZoop = 1;
+            loopInt = 1;
             colorLerpTime += Time.deltaTime * colorLerpSpeed;
             powerLerpTime += Time.deltaTime * powerLerpSpeed;
             dissolveLerpTime += Time.deltaTime * dissolveSpeed;
@@ -53,7 +53,7 @@ public class DissolveScript : MonoBehaviour
         }
         if(resetDissolve)
         {
-            loopZoop = 0;
+            loopInt = 0;
             startDissolve = false;
             mat.SetColor("_RimColor", naturalColor);
             mat.SetFloat("_RimPower", 8);
@@ -67,7 +67,7 @@ public class DissolveScript : MonoBehaviour
         //mat.SetColor("_RimColor", Color.Lerp(dissolveColor, mat.color, (colorLerpSpeed * Time.deltaTime)));
         resetDissolve = false;
         startDissolve = true;
-        loopZoop = 0;
+        loopInt = 0;
 
     }
     public void ResetObject()
